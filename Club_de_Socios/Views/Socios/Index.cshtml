@@ -1,0 +1,111 @@
+﻿@model IEnumerable<Club_de_Socios.Models.Socio>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Socios</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Apellidos)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Direccion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Telefono)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Sexo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Edad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Fecha)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tipo_Membresia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Lugar_de_trabajo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Direccion_Oficina)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Telefono_Oficina)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Estado_de_Membresia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Fecha_Ingreso)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Fecha_de_Salida)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Apellidos)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Direccion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Telefono)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Sexo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Edad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Fecha)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tipo_Membresia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Lugar_de_trabajo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Direccion_Oficina)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Telefono_Oficina)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Estado_de_Membresia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Fecha_Ingreso)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Fecha_de_Salida)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.SocioID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.SocioID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.SocioID })
+        </td>
+    </tr>
+}
+
+</table>
